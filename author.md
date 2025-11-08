@@ -2,16 +2,15 @@
 
 ## Name
 
-replace me with your name
+Md Ataullah Bahari
 
 ## Student Number
 
-55555555555
+3746539
 
 ## GitHub Username
 
-githubuser
+M-A-Bahari
 
 ## Any comments, notes or considerations
 
-Provide any notes, ideas, feedback, problems, etc. here to share with your grader/instructor.
