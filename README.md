@@ -1,100 +1,127 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/F2b4Vxkg)
-# Project Description
+# Library Management System
 
-In this project, you will put what you have learned in class into
-practice and extend what you have learned to create an app using
-SimpleKit that allows editing different objects.
+The **Library Management System** is an interactive application designed to manage core library operations, including member registration, book inventory management, lending, and book returns. The system provides a clean, intuitive interface with clearly separated views for members, books, and administrative tasks.
 
-Your project is to be completed individually.
+This project demonstrates practical software design concepts such as Model–View–Controller (MVC) architecture, the subscriber pattern, and multi-view state management within a real-world domain.
 
-## Due Date
+---
 
-***November 5th, 2025***
+## Features
 
-# Requirements
+- Member management (add, view, and track borrowed books)
+- Book inventory management with availability tracking
+- Lending books to members with validation
+- Returning books with automatic state updates
+- Multiple coordinated views with real-time updates
+- Color-coded interface sections for clarity and usability
+- Pre-populated example data for demonstration
 
-You can select an application for your project that interests you, but
-your goal should be to create one that fulfills the requirements below.
+---
 
-## Implementation Requirements
+## Technologies Used
 
-- Your application will be built using SimpleKit
+- TypeScript / JavaScript
+- SimpleKit (UI framework)
+- HTML / CSS
+- MVC architecture
+- Subscriber / Observer pattern
 
-- Your application must use an MVC design
+---
 
-- Your application should follow good design heuristics (where possible)
+## Application Architecture
 
-- Your application should employ CRAP design as much as possible
+The application follows the **Model–View–Controller (MVC)** pattern:
 
-- Your application should provide at least two different views for some
-  aspect of your model
+### Model
+- Manages members, books, and borrowing relationships
+- Enforces business rules (e.g., preventing lending unavailable books)
 
-- Your application must provide a consistent and appropriate look and
-  feel (i.e., colours, fonts, etc.) for your project
+### View
+- Members list view
+- Member detail view
+- Books list view
+- Administrative view for managing system operations
 
-- Your application should allow interacting and entering model
-  information for at least three different types of domain objects
-  (e.g., a calendar app might allow you to create/edit/delete users,
-  meetings, and holidays)
+### Controller
+- Handles user input
+- Coordinates updates between views and models
 
-- Domain objects represent distinct data or information represented in
-  your app
+All views subscribe to model changes, ensuring consistent and automatic updates across the application.
 
-  - In a calendar app: users, meetings, and holidays could represent
-    three different domain objects
+---
 
-  - In a course organization app, domain objects could be: students,
-    grades, and lectures
+## Domain Objects
 
-- Domain objects should be able to be created, edited/updated/changed
-  and deleted as appropriate through user or system actions
+### Member
+- Unique ID and name
+- Tracks currently borrowed books
+- Updates automatically on lending and return actions
 
-- Provide a set of exemplary domain objects that are pre-populated in
-  your application
+### Book
+- Unique ID, title, and available copy count
+- Tracks availability and current borrowers
 
-- Your application does not need to save its updated state when it is
-  closed (i.e., the system will return to its original state upon
-  restarting)
+### Borrow Relationship
+- Represents the lending relationship between members and books
+- Enforced through system validation logic
 
-- Be creative - some points will be reserved for the
-  complexity/creativity of the projects, but do not go too far
+Example domain objects are preloaded for demonstration purposes.
 
-## Example Project Ideas
+---
 
-- A media organization/player app
+## Third-Party Libraries
 
-- The ultimate todo app
+This project uses **SimpleKit**, an external UI framework.
 
-- A personal budgeting app
+- SimpleKit is **not authored by me**
+- It is used according to its original license
+- No SimpleKit source code is redistributed in this repository
 
-- A simple 2D RPG game
+Please refer to the official SimpleKit repository for license and usage details.
 
-- A tool to create RPG characters or plan simple campaigns
+---
 
-- A data charting tool\... enter data and create charts
+## Academic Context
 
-- Recreate an app you like using SimpleKit
+This project was originally developed as part of a university course.
 
-- Your idea! If you have any questions, please get in touch with the
-  instructors.
+It is shared publicly **for educational and portfolio purposes only**.
 
-# Project Deliverables
+> **Academic Integrity Notice**  
+> If you are currently enrolled in a similar course, do not copy or submit this code as your own work.
 
-- your working project code pushed by the due date to your repo
+---
 
-- a short one-page report describing your project, available in
-  REPORT.md
+## Limitations
 
-- a video demonstration of your app (no longer than 3 mins long; if
-  it\'s shorter, that\'s fine). The video can be narrated, but it should
-  demonstrate all the main functionalities of your app. Upload your
-  videos to D2L.
+- Application state is not persisted between sessions
+- Data resets to its initial state on restart
+- Designed for demonstration and learning purposes rather than production use
 
-# Assessment
+---
 
-- Points will be awarded based on meeting the requirements above and
-  providing a fully working, bug/error-free system that follows the
-  basic principles of usability discussed in the lectures.
+## Future Improvements
 
-- A portion of the project grade will be awarded for the
-  creativity/complexity of your project (\~25%)
+- Search and filtering for members and books
+- Scrollable views for large datasets
+- Alternative layouts (card view vs list view)
+- Persistent storage (database or local storage)
+- Accessibility enhancements (keyboard navigation, ARIA labels)
+
+---
+
+## License
+
+This repository contains original work authored by **Md Ataullah Bahari** and is licensed under the **MIT License**.
+
+Third-party libraries remain under their respective licenses and are not covered by this license.
+
+See the `LICENSE` file for full details.
+
+---
+
+## Author
+
+**Md Ataullah Bahari**  
+Computer Science Student  
+Academic & Portfolio Project
